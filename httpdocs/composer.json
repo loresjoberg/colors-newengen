@@ -1,0 +1,22 @@
+{
+    "name": "loresjoberg/newengen-demo",
+    "authors": [
+        {
+            "name": "loresjoberg",
+            "email": "loresjoberg@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.5",
+        "ozdemirburak/iris": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2",
+        "mockery/mockery": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LoreSjoberg\\": "classes/"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<div id="detail-main">
+    {% set swatchSize = 'swatch-large' %}
+    {% set color = mainColor %}
+    {% include 'swatch.twig' %}
+</div>
+
+
+<div id="detail-tints">
+    {% set swatchSize = 'swatch-small' %}
+    {% for color in mainColor.tints %}
+        {% include 'swatch.twig' %}
+    {% endfor %}
+</div>
+
+<div id="detail-clear">
+    <button type="button" id="clear-button">Clear</button>
+</div>

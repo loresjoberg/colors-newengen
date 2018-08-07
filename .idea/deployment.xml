@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="dogs-newengine">
+    <serverData>
+      <paths name="dogs-newengine">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/newengen/" local="$PROJECT_DIR$/httpdocs" web="/newengen/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="925fdafb-d63e-48f3-84d0-86754e3c0b69" name="dogs-newengine" url="http://dogsandsorcerers.com">
+        <fileTransfer host="dogsandsorcerers.com" port="22" privateKey="$USER_HOME$/.ssh/aws-ec2-key.pem" rootFolder="/var/www/html/" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

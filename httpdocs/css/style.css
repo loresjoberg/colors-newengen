@@ -1,0 +1,289 @@
+body, html {
+  font-family: "Source Serif Pro", serif;
+  color: #363c3c;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+button {
+  font-family: "Source Serif Pro", serif;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid #363c3c;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#family-list-ul {
+  display: none;
+}
+
+button, #search, #family-list-select {
+  width: 200px;
+  height: 40px;
+  font-size: 12pt;
+  display: block;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 600px) {
+  button, #search, #family-list-select {
+    width: 200px;
+    height: 40px;
+    font-size: 18pt;
+    margin: 0;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 900px) {
+  button, #search, #family-list-select {
+    width: 260px;
+    height: 60px;
+    font-size: 18pt;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #family-list-select {
+    display: none;
+  }
+
+  #family-list-ul {
+    display: block;
+  }
+}
+#top-row, #bottom-row #sidebar {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 20px 0;
+  text-align: center;
+}
+#top-row .stackable, #bottom-row #sidebar .stackable {
+  float: none;
+  display: block;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+@media only screen and (min-width: 600px) {
+  #top-row .stackable, #bottom-row #sidebar .stackable {
+    margin: 0;
+  }
+}
+
+#top-row {
+  background-color: #363c3c;
+  color: white;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-width: 600px) {
+  #top-row {
+    height: 100px;
+    padding: 0 30px 0 30px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #top-row .logo {
+    padding-top: 27px;
+    margin-top: 0;
+    float: left;
+  }
+}
+#top-row .search-bar {
+  display: inline-block;
+}
+@media only screen and (min-width: 600px) {
+  #top-row .search-bar {
+    padding-top: 20px;
+    float: right;
+    margin-top: 0;
+  }
+}
+#top-row .search-bar #search {
+  border-radius: 10px;
+  padding-left: 30px;
+}
+
+#bottom-row {
+  background-color: #d6d8d8;
+}
+#bottom-row #sidebar {
+  background-color: #d6d8d8;
+}
+@media only screen and (min-width: 600px) {
+  #bottom-row #sidebar {
+    text-align: left;
+    width: 40%;
+    max-width: 320px;
+    float: left;
+    padding-top: 40px;
+    padding-left: 15px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #bottom-row #sidebar {
+    padding-top: 80px;
+    padding-left: 30px;
+  }
+}
+#bottom-row #family-list {
+  font-size: 21pt;
+}
+#bottom-row #family-list ul {
+  margin-top: 20px;
+}
+@media only screen and (min-width: 900px) {
+  #bottom-row #family-list ul {
+    margin-top: 45px;
+  }
+}
+#bottom-row #family-list ul li {
+  line-height: 2;
+}
+
+#color-view {
+  background-color: white;
+  overflow: hidden;
+  padding-top: 20px;
+  min-height: 1000px;
+  box-shadow: inset 3px 0 3px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid #adadad;
+}
+@media only screen and (min-width: 600px) {
+  #color-view {
+    padding-top: 40px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #color-view {
+    padding-top: 80px;
+  }
+}
+#color-view #color-pane {
+  margin: 0 20px 0 20px;
+}
+#color-view #color-pane .swatch-list {
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+#color-view #color-pane .swatch-list:after {
+  content: "";
+  width: 100%;
+  /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+#color-view #color-pane #detail-tints {
+  width: 100%;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+#color-view #color-pane #detail-tints:after {
+  content: "";
+  width: 100%;
+  /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+#color-view #color-pane #detail-main {
+  width: 100%;
+}
+#color-view #color-pane #detail-main .swatch-large {
+  cursor: pointer;
+  margin-bottom: 30px;
+  width: 100%;
+}
+#color-view #color-pane #detail-main .swatch-large .color-box {
+  height: 300px;
+}
+#color-view #color-pane #detail-clear {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#color-view #color-pane .swatch {
+  display: inline-block;
+  border: 1px solid white;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+#color-view #color-pane .swatch .color-box {
+  border-radius: 10px 10px 0 0;
+}
+#color-view #color-pane .swatch.swatch-small {
+  width: 100%;
+}
+#color-view #color-pane .swatch.swatch-small .color-box {
+  height: 100px;
+}
+@media only screen and (min-width: 900px) {
+  #color-view #color-pane .swatch.swatch-small {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #color-view #color-pane .swatch.swatch-small {
+    width: 175px;
+  }
+}
+#color-view #color-pane .swatch.swatch-medium {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  cursor: pointer;
+}
+@media only screen and (min-width: 900px) {
+  #color-view #color-pane .swatch.swatch-medium {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #color-view #color-pane .swatch.swatch-medium {
+    width: 220px;
+    margin-left: 20px;
+  }
+}
+#color-view #color-pane .swatch.swatch-medium .color-box {
+  height: 210px;
+}
+#color-view #color-pane .swatch .color-label {
+  height: 50px;
+  padding-left: 25px;
+  padding-top: 18px;
+}
+#color-view #color-pane .swatch .color-label .color-hex {
+  font-size: 18pt;
+}
+
+.pagination-block {
+  margin: 40px 0 60px 0;
+  text-align: center;
+  font-size: 18pt;
+}
+.pagination-block ul {
+  display: inline-block;
+}
+.pagination-block ul .page-link {
+  float: none;
+  display: inline-block;
+  line-height: 2;
+  margin: 0 8px;
+}
+.pagination-block ul .page-link.active {
+  text-decoration: underline;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*# sourceMappingURL=style.css.map */

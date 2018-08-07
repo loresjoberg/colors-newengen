@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ baseUrl }}/css/style.css">
+</head>
+<body>
+<div id="main">
+    <div id="top-row" class="stackable-container">
+        <div class="logo stackable"><img src="{{ baseUrl }}/images/newengen-logo.png" alt="New Engen" title="New Engen"></div>
+        <div class="search-bar stackable">
+            <label>
+                <input type="text" name="search" id="search" placeholder="Search">
+            </label>
+        </div>
+    </div>
+    <div id="bottom-row">
+        <div id="sidebar" class="stackable-container">
+            <div id="random-button-wrapper" class="stackable">
+                <button id="random-color" type="button">Random Color</button>
+            </div>
+            <div id="family-list" class="stackable">
+                <ul id="family-list-ul">
+                    <li data-family="red">Red</li>
+                    <li data-family="orange">Orange</li>
+                    <li data-family="yellow">Yellow</li>
+                    <li data-family="green">Green</li>
+                    <li data-family="blue">Blue</li>
+                    <li data-family="purple">Purple</li>
+                    <li data-family="brown">Brown</li>
+                    <li data-family="gray">Gray</li>
+                </ul>
+                <label>
+                    <select id="family-list-select" name="family-list-select">
+                        <option value="select">Select Color Family</option>
+                        <option value="red">Red</option>
+                        <option value="orange">Orange</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="purple">Purple</option>
+                        <option value="brown">Brown</option>
+                        <option value="gray">Gray</option>
+                    </select>
+                </label>
+            </div>
+
+        </div>
+        <div id="color-view">
+            <div id="color-pane"></div>
+        </div>
+    </div>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<!--suppress HtmlUnknownTarget -->
+<script src="{{ baseUrl }}/javascript/color-render.js"></script>
+</body>
+</html>
